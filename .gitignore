@@ -50,3 +50,6 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+DsAndAlgo/.vs/DsAndAlgo/v16/.suo
+DsAndAlgo/ArrayCustom/bin/
+DsAndAlgo/ArrayCustom/obj/
