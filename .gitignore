@@ -53,3 +53,7 @@ dkms.conf
 DsAndAlgo/.vs/DsAndAlgo/v16/.suo
 DsAndAlgo/ArrayCustom/bin/
 DsAndAlgo/ArrayCustom/obj/
+ArrayCustom/bin/
+ArrayCustom/obj/
+ListCustom/obj/
+.vs/
