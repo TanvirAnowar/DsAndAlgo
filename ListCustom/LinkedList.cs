@@ -90,6 +90,28 @@ namespace ListCustom
             return -1;
 
         }
+
+        public bool Contains(int itemValue)
+        {
+            var current = FirstNode;
+
+            while (current != null)
+            {
+                if (current.GetValue() == itemValue)
+                {
+                    return true;
+                }
+                else
+                {
+                    current = current.GetNextNode();
+                }
+            }
+            return false;
+
+            // return IndexOf(itemValue) != -1;
+        }
+
+
     }
 
     
