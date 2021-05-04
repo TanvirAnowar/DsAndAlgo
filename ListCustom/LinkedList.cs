@@ -22,6 +22,17 @@ namespace ListCustom
             {
                 NextNode = currentNode;
             }
+
+            public int GetValue()
+            {
+                return Value;
+            }
+
+            public Node GetNextNode()
+            {
+                return NextNode;
+            }
+
         }
 
         private Node FirstNode { get; set; }
@@ -41,6 +52,43 @@ namespace ListCustom
                 LastNode.SetNextNode(itemNode);
                 LastNode = itemNode;
             }
+        }
+
+        public void AddFirst(int item)
+        {
+            var currentNode = new Node(item);
+
+            if (FirstNode == null)
+            {
+                FirstNode = LastNode = currentNode;
+            }
+            else
+            {
+                FirstNode.SetNextNode(currentNode);
+                FirstNode = currentNode;
+            }
+        }
+
+        public int IndexOf(int itemValue)
+        {
+            var index = 0;
+            var current = FirstNode;
+
+            while (current != null)
+            {
+                if (current.GetValue() == itemValue)
+                {
+                    return index;
+                }
+                else
+                {
+                    index++;
+                    current = current.GetNextNode();
+                }
+            }
+
+            return -1;
+
         }
     }
 
