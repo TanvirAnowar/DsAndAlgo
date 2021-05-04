@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListCustom
 {
-    public class LinkList
+    public class LinkedList
     {
         private class Node
         {
@@ -39,10 +39,8 @@ namespace ListCustom
             else 
             {
                 LastNode.SetNextNode(itemNode);
+                LastNode = itemNode;
             }
-
-
-
         }
     }
 
