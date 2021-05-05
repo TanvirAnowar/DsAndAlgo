@@ -146,6 +146,8 @@ namespace ListCustom
 
         }
 
+
+
         private Node getSecondLastNode(Node lastNode)
         {
             var currentNode = FirstNode;
@@ -158,7 +160,7 @@ namespace ListCustom
                 }
                 else
                 {
-                    currentNode.SetNextNode(currentNode.GetNextNode());
+                    currentNode = currentNode.GetNextNode();
                 }
 
             }

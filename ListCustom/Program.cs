@@ -19,9 +19,10 @@ namespace ListCustom
 
            // var exists = linkedList.Contains(5);
 
-           linkedList.RemoveFirst();
+           // linkedList.RemoveFirst();
+           linkedList.RemoveLast();
 
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }
