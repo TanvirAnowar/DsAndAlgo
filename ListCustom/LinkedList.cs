@@ -111,6 +111,24 @@ namespace ListCustom
             // return IndexOf(itemValue) != -1;
         }
 
+        public void RemoveFirst()
+        {
+            if(FirstNode == null)
+                throw new Exception();
+
+            // For only one item in the list
+            if (FirstNode == LastNode)
+            {
+                FirstNode = LastNode = null;
+            }
+
+            var secondNode = FirstNode.GetNextNode();
+            FirstNode.SetNextNode(null);
+
+            FirstNode = secondNode;
+        }
+
+
 
     }
 

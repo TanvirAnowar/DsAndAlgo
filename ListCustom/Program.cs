@@ -17,8 +17,9 @@ namespace ListCustom
 
             // var index = linkedList.IndexOf(1);
 
-            var exists = linkedList.Contains(5);
+           // var exists = linkedList.Contains(5);
 
+           linkedList.RemoveFirst();
 
             Console.WriteLine("Hello World!");
         }
