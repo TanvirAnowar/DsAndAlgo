@@ -128,6 +128,45 @@ namespace ListCustom
             FirstNode = secondNode;
         }
 
+        public void RemoveLast()
+        {
+            if (FirstNode == null)
+                throw new Exception();
+
+            if (FirstNode == LastNode)
+            {
+                FirstNode = LastNode = null;
+            }
+            else
+            {
+                var secondLastNode = getSecondLastNode(LastNode);
+                LastNode = secondLastNode;
+                LastNode.SetNextNode(null);
+            }
+
+        }
+
+        private Node getSecondLastNode(Node lastNode)
+        {
+            var currentNode = FirstNode;
+
+            while (currentNode.GetNextNode() != null)
+            {
+                if (currentNode.GetNextNode() == lastNode)
+                {
+                    return currentNode;
+                }
+                else
+                {
+                    currentNode.SetNextNode(currentNode.GetNextNode());
+                }
+
+            }
+
+            return null;
+
+        }
+
 
 
     }
