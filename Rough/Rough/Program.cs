@@ -14,7 +14,8 @@ public class Program
        //var result = ReversWords.Revers("test string !");
 
        //var result = ReversEachWord.Execute("test string !");
-       var result = CountCharInString.Execute("a bbb ca");
+       //var result = CountCharInString.Execute("a bbb ca");
+       var result = RemoveDuplicateChar.Execute("a bbb ca");
     }
 
     
