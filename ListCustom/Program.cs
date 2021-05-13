@@ -20,9 +20,11 @@ namespace ListCustom
            // var exists = linkedList.Contains(5);
 
            // linkedList.RemoveFirst();
-           linkedList.RemoveLast();
+           //linkedList.RemoveLast();
 
-           
+           var result = linkedList.ToArray();
+
+
         }
     }
 }

@@ -38,10 +38,12 @@ namespace ListCustom
         private Node FirstNode { get; set; }
         private Node LastNode { get; set; }
 
+        private int Size { get; set; } = 0;
+
         public void Add(int item)
         {
             var itemNode = new Node(item);
-
+        
             if (FirstNode == null)
             {
                 FirstNode = itemNode;
@@ -52,12 +54,15 @@ namespace ListCustom
                 LastNode.SetNextNode(itemNode);
                 LastNode = itemNode;
             }
+
+            changeSize(1);
+
         }
 
         public void AddFirst(int item)
         {
             var currentNode = new Node(item);
-
+            
             if (FirstNode == null)
             {
                 FirstNode = LastNode = currentNode;
@@ -67,6 +72,9 @@ namespace ListCustom
                 FirstNode.SetNextNode(currentNode);
                 FirstNode = currentNode;
             }
+
+            changeSize(1);
+
         }
 
         public int IndexOf(int itemValue)
@@ -115,7 +123,7 @@ namespace ListCustom
         {
             if(FirstNode == null)
                 throw new Exception();
-
+            
             // For only one item in the list
             if (FirstNode == LastNode)
             {
@@ -123,9 +131,12 @@ namespace ListCustom
             }
 
             var secondNode = FirstNode.GetNextNode();
-            FirstNode.SetNextNode(null);
+           // FirstNode.SetNextNode(null);
 
             FirstNode = secondNode;
+
+            changeSize(-1);
+
         }
 
         public void RemoveLast()
@@ -133,6 +144,7 @@ namespace ListCustom
             if (FirstNode == null)
                 throw new Exception();
 
+            
             if (FirstNode == LastNode)
             {
                 FirstNode = LastNode = null;
@@ -144,6 +156,32 @@ namespace ListCustom
                 LastNode.SetNextNode(null);
             }
 
+            changeSize(-1);
+
+
+        }
+
+        public int[] ToArray()
+        {
+            if (FirstNode == null)
+                return null;
+
+            var destinationArray = new int[Size];
+
+            var currentNode = FirstNode;
+
+            int count = 0;
+
+            while (currentNode.GetNextNode() != null)
+            {
+                destinationArray[count] = currentNode.GetValue();
+                count++;
+                currentNode = currentNode.GetNextNode();
+            }
+
+            destinationArray[count] = LastNode.GetValue();
+
+            return destinationArray;
         }
 
 
@@ -169,6 +207,14 @@ namespace ListCustom
 
         }
 
+        private void changeSize(int count)
+        {
+            if((Size < 0) && (count == -1))
+                return;
+
+            Size += count;
+
+        }
 
 
     }
