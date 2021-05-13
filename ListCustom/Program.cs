@@ -22,8 +22,9 @@ namespace ListCustom
            // linkedList.RemoveFirst();
            //linkedList.RemoveLast();
 
-           var result = linkedList.ToArray();
+           //var result = linkedList.ToArray();
 
+           linkedList.Revers();
 
         }
     }

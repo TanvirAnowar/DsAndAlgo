@@ -185,6 +185,30 @@ namespace ListCustom
         }
 
 
+        public void Revers()
+        {
+            if(FirstNode == null)
+                return;
+
+            var previousNode = FirstNode;
+            var currentNode = FirstNode.GetNextNode();
+
+            while (currentNode != null)
+            {
+                var nextNode = currentNode.GetNextNode();
+
+                currentNode.SetNextNode(previousNode);
+
+                previousNode = currentNode;
+                currentNode = nextNode;
+            }
+
+            LastNode = FirstNode;
+            LastNode.SetNextNode(null);
+
+            FirstNode = previousNode;
+        }
+
 
         private Node getSecondLastNode(Node lastNode)
         {
