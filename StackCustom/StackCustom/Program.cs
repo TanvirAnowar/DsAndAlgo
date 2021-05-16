@@ -6,7 +6,10 @@ namespace StackCustom
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string testString = "({[]})";
+            string testString2 = "({[]}})";
+
+            var validator = new ParenthesisValidator(testString2).Validate();
         }
     }
 }
