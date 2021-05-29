@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListCustom", "ListCustom\Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rough", "Rough\Rough\Rough.csproj", "{F6F6222B-2419-4740-A715-7609820DE15B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackCustom", "StackCustom\StackCustom\StackCustom.csproj", "{ADAF72F2-A90E-4EBE-A7B7-8543C7EF4603}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackCustom", "StackCustom\StackCustom\StackCustom.csproj", "{ADAF72F2-A90E-4EBE-A7B7-8543C7EF4603}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "BinaryTree\BinaryTree\BinaryTree.csproj", "{7E1861D3-6AC2-4B0C-A04C-4A37245F8758}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ADAF72F2-A90E-4EBE-A7B7-8543C7EF4603}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADAF72F2-A90E-4EBE-A7B7-8543C7EF4603}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADAF72F2-A90E-4EBE-A7B7-8543C7EF4603}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1861D3-6AC2-4B0C-A04C-4A37245F8758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1861D3-6AC2-4B0C-A04C-4A37245F8758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1861D3-6AC2-4B0C-A04C-4A37245F8758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1861D3-6AC2-4B0C-A04C-4A37245F8758}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
