@@ -14,6 +14,9 @@ namespace BinaryTree
             tree.Insert(2);
             tree.Insert(9);
 
+            var exist = tree.Find(2);
+            var notExist = tree.Find(10);
+
         }
     }
 }

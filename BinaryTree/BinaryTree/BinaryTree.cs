@@ -40,5 +40,43 @@
 
             }
         }
+
+        public bool Find(int value)
+        {
+            if (root == null)
+                return false;
+
+            current = root;
+
+            while (true)
+            {
+                if (value == current.Value)
+                {
+                    return true;
+                }
+
+                if (value < current.Value)
+                {
+                    if (current.LeftNode == null)
+                    {
+                        return false;
+                    }
+
+                    current = current.LeftNode;
+                }
+                else
+                {
+                    if (current.RightNode == null)
+                    {
+                        return false;
+                    }
+
+                    current = current.RightNode;
+                }
+                
+
+            }
+        }
+
     }
 }
