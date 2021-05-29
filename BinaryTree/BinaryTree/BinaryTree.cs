@@ -18,7 +18,25 @@
 
             while (true)
             {
+                if (value < current.Value)
+                {
+                    if (current.LeftNode == null)
+                    {
+                        current.LeftNode = new Node(value);
+                        return;
+                    }
 
+                    current = current.LeftNode;
+                }
+                else
+                {
+                    if (current.RightNode == null)
+                    {
+                        current.RightNode = new Node(value);
+                        return;
+                    }
+                    current = current.RightNode;
+                }
 
             }
         }
