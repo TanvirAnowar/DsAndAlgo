@@ -1,10 +1,12 @@
-﻿namespace BinaryTree
+﻿using System;
+
+namespace BinaryTree
 {
     public class BinaryTree
     {
         private Node root;
         private Node current;
-        
+
         public void Insert(int value)
         {
             if (root == null)
@@ -73,9 +75,26 @@
 
                     current = current.RightNode;
                 }
-                
+
 
             }
+        }
+
+
+        public void DepthFirstTravers()
+        {
+            DepthFirstTravers(root);
+        }
+        private void DepthFirstTravers(Node root)
+        {
+            if (root == null)
+                return;
+
+            Console.WriteLine(root.Value);
+
+            DepthFirstTravers(root.LeftNode);
+            DepthFirstTravers(root.RightNode);
+
         }
 
     }

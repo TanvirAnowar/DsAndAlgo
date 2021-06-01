@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BinaryTree
+﻿namespace BinaryTree
 {
     class Program
     {
@@ -14,8 +12,11 @@ namespace BinaryTree
             tree.Insert(2);
             tree.Insert(9);
 
-            var exist = tree.Find(2);
-            var notExist = tree.Find(10);
+            //var exist = tree.Find(2);
+            // var notExist = tree.Find(10);
+
+            tree.DepthFirstTravers();
+
 
         }
     }
