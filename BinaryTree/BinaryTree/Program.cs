@@ -1,4 +1,6 @@
-﻿namespace BinaryTree
+﻿using System;
+
+namespace BinaryTree
 {
     class Program
     {
@@ -15,7 +17,9 @@
             //var exist = tree.Find(2);
             // var notExist = tree.Find(10);
 
-            tree.DepthFirstTravers();
+     //       tree.DepthFirstTravers();
+            var height = tree.HeightOfTree();
+            Console.WriteLine(height);
 
 
         }

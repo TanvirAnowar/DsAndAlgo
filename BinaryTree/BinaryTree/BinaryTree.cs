@@ -97,5 +97,27 @@ namespace BinaryTree
 
         }
 
+        public int HeightOfTree()
+        {
+            return HeightOfTree(root);
+        }
+
+        private int HeightOfTree(Node root)
+        {
+            if (root == null)
+                return -1;
+
+            if (root.LeftNode == null && root.RightNode == null)
+                return 0;
+
+            var left = HeightOfTree(root.LeftNode);
+            var right = HeightOfTree(root.RightNode);
+
+            return 1 + Math.Max(left, right);
+
+
+
+        }
+
     }
 }
